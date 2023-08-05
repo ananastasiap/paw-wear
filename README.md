@@ -1,1 +1,7 @@
 # paWWear
+
+## About
+
+## Technologies
+
+## Preview
