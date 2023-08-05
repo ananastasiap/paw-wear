@@ -1,40 +1,46 @@
+import Categories from './components/categories-directory/categories.component';
+
 const App = () => {
 
   const categories = [
     {
       id: 1,
       title: 'Hats',
+      imageUrl: '/imgs/back-hat.png',
     },
     {
       id: 2,
-      title: 'Collars',
+      title: 'Collars and Harness',
+      imageUrl: '/imgs/back-harness.png',
     },
     {
       id: 3,
       title: 'Shoes',
+      imageUrl: '/imgs/back-shoes.png',
     },
     {
       id: 4,
-      title: 'Hot',
+      title: 'Outerwear',
+      imageUrl: '/imgs/back-outerwear.png',
     },
     {
       id: 5,
-      title: 'Cold',
+      title: 'Backpacks',
+      imageUrl: '/imgs/back-backpack.png',
     },
   ]
 
   return (
-    <div className='categories-container'>
-      {categories.map(({title}) => (
-        <div className='category-container'>
-          <div className='background-image' />
-          <div className='category-body-container'>
-            <h2>{title}</h2>
-            <p>Shop Now</p>
-          </div>
-        </div>
-      ))}
-    </div>
+    <Categories categories={categories}/>
+    // <div className='categories-container'>
+    //   {categories.map(({id, title, imageUrl}) => (
+    //     <Categoryitem
+    //       key={id}
+    //       title={title}
+    //       imageUrl={imageUrl}
+    //     />
+    //   ))}
+    // </div>
   );
 }
 
