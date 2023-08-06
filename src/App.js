@@ -1,47 +1,16 @@
-import Categories from './components/categories-directory/categories.component';
+import { Routes, Route } from 'react-router-dom';
+
+import Home from "./routes/home/home.component";
+import Navigation from './routes/navigation/navigation.component';
 
 const App = () => {
-
-  const categories = [
-    {
-      id: 1,
-      title: 'Hats',
-      imageUrl: '/imgs/back-hat.png',
-    },
-    {
-      id: 2,
-      title: 'Collars and Harness',
-      imageUrl: '/imgs/back-harness.png',
-    },
-    {
-      id: 3,
-      title: 'Shoes',
-      imageUrl: '/imgs/back-shoes.png',
-    },
-    {
-      id: 4,
-      title: 'Outerwear',
-      imageUrl: '/imgs/back-outerwear.png',
-    },
-    {
-      id: 5,
-      title: 'Backpacks',
-      imageUrl: '/imgs/back-backpack.png',
-    },
-  ]
-
   return (
-    <Categories categories={categories}/>
-    // <div className='categories-container'>
-    //   {categories.map(({id, title, imageUrl}) => (
-    //     <Categoryitem
-    //       key={id}
-    //       title={title}
-    //       imageUrl={imageUrl}
-    //     />
-    //   ))}
-    // </div>
+    <Routes>
+      <Route path='/' element={ <Navigation />}>
+        <Route index element={ <Home /> } />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;
