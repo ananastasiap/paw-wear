@@ -18,7 +18,7 @@ const SignUpForm = () => {
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -26,7 +26,7 @@ const SignUpForm = () => {
     if(password !== confirmPassword) {
       alert('password do not match');
       return;
-    }
+    };
 
     try {
       const { user } = await createAuthUserWithEmailAndPassword(email, password);
@@ -45,7 +45,7 @@ const SignUpForm = () => {
     const {name, value} = event.target;
 
     setFormFields({...formFields, [name]: value});
-  }
+  };
 
   return (
     <div className="sign-up-container">
