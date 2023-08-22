@@ -1,8 +1,11 @@
 import { Fragment, useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
-import { ReactComponent as Logo } from '../../assests/icons/logo.svg';
+import CartIcon from '../../components/cart-icon/cart-icon.component';
+
 import { UserContext } from '../../contexts/user.context';
+
+import { ReactComponent as Logo } from '../../assests/icons/logo.svg';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
 import './navigation.style.scss';
@@ -29,6 +32,7 @@ const Navigation = () => {
               SIGN IN
             </Link>
           )}
+          <CartIcon />
         </div>
       </div>
       <Outlet />
