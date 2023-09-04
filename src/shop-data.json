@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Baseball Cap",
+    "imageUrl": "/imgs/img-items/baseball-cap.png",
+    "price": 19
+  },
+  {
+    "id": 2,
+    "name": "Smile Cap",
+    "imageUrl": "/imgs/back-hat.png",
+    "price": 7
+  },
+  {
+    "id": 3,
+    "name": "Knitted Frog Hat",
+    "imageUrl": "/imgs/img-items/frog-hat.png",
+    "price": 35
+  },
+  {
+    "id": 4,
+    "name": "Pilot Hat",
+    "imageUrl": "/imgs/img-items/pilot.png",
+    "price": 17
+  },
+  {
+    "id": 5,
+    "name": "Winter Hat",
+    "imageUrl": "/imgs/img-items/winter-hat.png",
+    "price": 34
+  },
+  {
+    "id": 6,
+    "name": "10 Pieces Rainbow Hat",
+    "imageUrl": "/imgs/img-items/rainbow-hats.png",
+    "price": 30
+  },
+  {
+    "id": 7,
+    "name": "Ushanka",
+    "imageUrl": "/imgs/img-items/ushanka-hat.png",
+    "price": 18
+  },
+  {
+    "id": 8,
+    "name": "Helmet",
+    "imageUrl": "/imgs/img-items/helmet.png",
+    "price": 19
+  },
+  {
+    "id": 9,
+    "name": "Sun Protection Cap",
+    "imageUrl": "/imgs/img-items/sun-protection-cap.png",
+    "price": 14
+  }
+]
