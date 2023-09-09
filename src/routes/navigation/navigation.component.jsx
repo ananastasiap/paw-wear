@@ -10,7 +10,7 @@ import { CartContext } from '../../contexts/cart.context';
 import { ReactComponent as Logo } from '../../assests/icons/logo.svg';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
-import { NavigationContanier, LogoContainer, NavLinks, NavLink } from './navigation.styles';
+import { NavigationContanier, LogoContainer, NavLinks, NavLink } from './navigation.styles.jsx';
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
