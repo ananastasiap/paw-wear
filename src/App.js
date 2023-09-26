@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux';
 
 import {
   onAuthStateChangedListener,
-  createUserDocumentFromAuth,
-} from "../utils/firebase/firebase.utils";
+  createUserDocumentFromAuth
+} from '../src/utils/firebase/firebase.utils';
 import Home from "./routes/home/home.component";
 import Navigation from './routes/navigation/navigation.component';
 import Authentication from './routes/authentication/authentication.component';
