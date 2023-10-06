@@ -34,7 +34,7 @@ console.log(firebaseApp);
 
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({
-  prompt: 'select_account'
+  prompt: 'select_account',
 });
 
 export const auth = getAuth();
@@ -44,7 +44,10 @@ export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googlePro
 
 export const db = getFirestore();
 
-export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+  ) => {
   const collectionRef = collection(db, collectionKey);
   const batch = writeBatch(db);
 
@@ -65,7 +68,10 @@ export const getCategoriesAndDocuments = async () => {
 
 };
 
-export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {}) => {
+export const createUserDocumentFromAuth = async (
+  userAuth,
+  additionalInformation = {}
+  ) => {
   if(!userAuth) return;
 
   const userDocRef = doc(db, 'users', userAuth.uid);
@@ -87,21 +93,40 @@ export const createUserDocumentFromAuth = async (userAuth, additionalInformation
     }
   }
 
-  return userDocRef;
+  return userSnapshot;
 };
 
-export const createAuthUserWithEmailAndPassword = async (email, password) => {
+export const createAuthUserWithEmailAndPassword = async (
+  email,
+  password
+  ) => {
    if(!email || !password) return;
 
   return await createUserWithEmailAndPassword(auth, email, password);
-}
+};
 
-export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+export const signInAuthUserWithEmailAndPassword = async (
+  email,
+  password
+  ) => {
   if(!email || !password) return;
 
  return await signInWithEmailAndPassword(auth, email, password);
-}
+};
 
 export const signOutUser = async () => await signOut(auth);
 
 export const onAuthStateChangedListener = (callback) => onAuthStateChanged(auth, callback);
+
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      (userAuth) => {
+        unsubscribe();
+        resolve(userAuth);
+      },
+      reject
+    );
+  });
+};
