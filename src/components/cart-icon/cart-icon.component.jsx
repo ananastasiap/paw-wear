@@ -5,6 +5,7 @@ import { selectCartCount, selectIscartOpen } from '../../store/cart/cart.selecto
 import { setIsCartOpen } from '../../store/cart/cart.action';
 
 import { ShoppingIcon, CartIconContainer, ItemCount } from './cart-icon.styles';
+import { CartDropdownContainer } from '../cart-dropdown/cart-dropdown.styles';
 
 const CartIcon = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const CartIcon = () => {
 
   const handleClickOutside = (event) => {
     if (isCartOpen) {
-      if (!event.target.closest('.cart-container')) {
+      if (!event.target.closest(CartDropdownContainer)) {
         dispatch(setIsCartOpen(false));
       }
     }
