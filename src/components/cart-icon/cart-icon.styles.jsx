@@ -8,19 +8,19 @@ export const ShoppingIcon = styled(ShoppingSVG)`
 `;
 
 export const CartIconContainer = styled.div`
-  width: 45px;
-  height: 45px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
 `;
 
 export const ItemCount = styled.span`
   position: absolute;
+  bottom: 12px;
   font-size: 10px;
   font-weight: bold;
-  bottom: 12px;
 `;
 

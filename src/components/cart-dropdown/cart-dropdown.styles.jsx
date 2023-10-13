@@ -7,33 +7,35 @@ import {
 } from '../button/button.styles';
 
 export const CartDropdownContainer = styled.div`
-  position: absolute;
-  width: 240px;
-  height: 340px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  border: 1px solid black;
-  background-color: white;
   top: 90px;
   right: 40px;
   z-index: 5;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 376px;
+  background-color: #FFFFFF;
+  border: 1px solid #0E0D0D;
+  border-radius: 10px;
+  overflow: hidden;
 
   ${BaseButton},
   ${GoogleSignInButton},
   ${InvertedButton} {
-    margin-top: auto;
+    margin: 25px 10px 10px;
   }
 `;
 
 export const EmptyMessage = styled.span`
-  font-size: 18px;
   margin: 50px auto;
+  font-size: 18px;
 `;
 
 export const CartItems = styled.div`
-  height: 240px;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  height: 280px;
+  padding: 20px;
+  overflow: auto;
 `;
