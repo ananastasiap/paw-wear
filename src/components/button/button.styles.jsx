@@ -3,34 +3,35 @@ import styled from "styled-components";
 import { SpinnerContainer } from "../spinner/spinner.styles";
 
 export const BaseButton = styled.button`
-  min-width: 165px;
-  width: auto;
-  height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
-  background-color: black;
-  color: white;
-  text-transform: uppercase;
-  font-family: 'Open Sans Condensed';
-  font-weight: bolder;
-  border: none;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  padding: 0 35px 0 35px;
+  font-family: 'Laila';
+  font-size: 15px;
+  font-weight: bolder;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 50px;
+  background-color: #DA8383;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
 
     &:hover {
-      background-color: white;
-      color: black;
-      border: 1px solid black;
+      color: #0E0D0D;
+      background-color: #FFFFFF;
+      border: 1px solid #0E0D0D;
     }
 `;
 
 export const GoogleSignInButton = styled(BaseButton)`
-  background-color: #4285f4;
-  color: white;
+  color: #FFFFFF;
+  background-color: #5290F4;
 
     &:hover {
       background-color: #357ae8;
@@ -39,13 +40,13 @@ export const GoogleSignInButton = styled(BaseButton)`
 `;
 
 export const InvertedButton = styled(BaseButton)`
-  background-color: white;
-  color: black;
-  border: 1px solid black;
+  color: #0E0D0D;
+  background-color: #FFFFFF;
+  border: 1px solid #0E0D0D;
 
     &:hover {
-      background-color: black;
-      color: white;
+      color: #FFFFFF;
+      background-color: #0E0D0D;
       border: none;
     }
 `;
