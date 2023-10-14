@@ -10,7 +10,7 @@ export const BaseButton = styled.button`
   width: auto;
   height: 50px;
   padding: 0 35px 0 35px;
-  font-family: 'Open Sans Condensed';
+  font-family: 'Laila';
   font-size: 15px;
   font-weight: bolder;
   color: #FFFFFF;
