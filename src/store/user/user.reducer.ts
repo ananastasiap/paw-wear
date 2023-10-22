@@ -11,7 +11,7 @@ import {
 } from './user.action';
 
 export type UserState = {
-  readonly currentUser: UserData |null,
+  readonly currentUser: UserData | null,
   readonly isLoading: boolean,
   readonly error: Error | null,
 }
@@ -25,10 +25,12 @@ const INITIAL_STATE: UserState = {
 export const userReducer = (
   state = INITIAL_STATE,
   action: AnyAction,
-) => {
+): UserState => {
 
   if(signInSuccess.match(action)) {
-    return { ...state, currentUser: action.payload }
+    if(action.payload) {
+      return { ...state, currentUser: action.payload }
+    }
   }
 
   if(signOutSuccess.match(action)) {
@@ -40,7 +42,9 @@ export const userReducer = (
     signOutFailed.match(action) ||
     signUpFailed.match(action)
     ) {
-      return { ...state, error: action.payload };
+      if(action.payload) {
+        return { ...state, error: action.payload };
+      }
     }
 
   return state;
