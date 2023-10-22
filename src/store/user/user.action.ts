@@ -19,11 +19,8 @@ export type GoogleSignInStart = Action<USER_ACTION_TYPES.GOOGLE_SIGN_IN_START>
 
 export type EmailSignInStart = ActionWithPayload<
   USER_ACTION_TYPES.EMAIL_SIGN_IN_START,
-  {
-    email: string,
-    password: string,
-  }
->
+  { email: string; password: string }
+>;
 
 export type SignInSuccess = ActionWithPayload<
   USER_ACTION_TYPES.SIGN_IN_SUCCESS, UserData
@@ -71,15 +68,16 @@ export const setCurrentUser = withMatcher((user: UserData): SetCurrentUser =>
 export const googleSignInStart = withMatcher((): GoogleSignInStart =>
   createAction(USER_ACTION_TYPES.GOOGLE_SIGN_IN_START));
 
-export const emailSignInStart = withMatcher(
-  (email: string, password: string): EmailSignInStart =>
-    createAction(
-    USER_ACTION_TYPES.EMAIL_SIGN_IN_START,
-    {email, password}
-));
+  export const emailSignInStart = withMatcher(
+    (email: string, password: string): EmailSignInStart =>
+      createAction(
+        USER_ACTION_TYPES.EMAIL_SIGN_IN_START,
+        { email, password }
+      )
+  );
 
 export const signInSuccess = withMatcher(
-  (user: UserData): SignInSuccess =>
+  (user: UserData & { id: string }): SignInSuccess =>
     createAction(USER_ACTION_TYPES.SIGN_IN_SUCCESS, user)
 );
 
