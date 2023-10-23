@@ -17,5 +17,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/store/redux-logger.d.ts"]
+  "include": ["src", "src/custom.d.ts"]
 }

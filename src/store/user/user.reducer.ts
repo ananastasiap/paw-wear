@@ -28,9 +28,7 @@ export const userReducer = (
 ): UserState => {
 
   if(signInSuccess.match(action)) {
-    if(action.payload) {
-      return { ...state, currentUser: action.payload }
-    }
+    return { ...state, currentUser: action.payload! }
   }
 
   if(signOutSuccess.match(action)) {
@@ -42,9 +40,7 @@ export const userReducer = (
     signOutFailed.match(action) ||
     signUpFailed.match(action)
     ) {
-      if(action.payload) {
-        return { ...state, error: action.payload };
-      }
+      return { ...state, error: action.payload! };
     }
 
   return state;
