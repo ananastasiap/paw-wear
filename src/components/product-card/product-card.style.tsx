@@ -33,6 +33,20 @@ export const ProductCartContainer = styled.div`
           display: flex;
         }
       }
+
+    @media screen and (max-width: 800px){
+      width: 40vw;
+
+      &:hover {
+        img {
+          opacity: unset;
+        }
+
+        button {
+          opacity: unset;
+        }
+      }
+    }
 `;
 
 export const Footer = styled.div`
@@ -41,6 +55,10 @@ export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+
+  @media screen and (max-width: 800px){
+    font-size: 12px;
+  }
 `;
 
 export const Name = styled.span`
