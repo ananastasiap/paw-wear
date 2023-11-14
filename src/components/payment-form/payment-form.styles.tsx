@@ -9,7 +9,8 @@ export const PaymentFormContainer = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 800px){
-    margin-bottom: 20px;
+    height: 157px;
+    margin-bottom: 55px;
   }
 `;
 
