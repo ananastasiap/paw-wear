@@ -11,5 +11,6 @@ export const AuthenticationContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     padding: 10px;
+    margin: 15px auto;
   }
 `;
