@@ -55,4 +55,8 @@ export const Group = styled.div`
   input[type='password'] {
     letter-spacing: 0.3em;
   }
+
+  @media screen and (max-width: 800px){
+    margin: 20px 0;
+  }
 `;

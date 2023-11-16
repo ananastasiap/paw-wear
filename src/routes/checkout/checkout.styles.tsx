@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CheckoutContainer = styled.div`
-  width: 55%;
+  width: 95%;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -21,6 +21,11 @@ export const HeaderBlock = styled.div`
   text-transform: capitalize;
   width: 23%;
 
+  @media screen and (max-width: 800px){
+    width: auto;
+    font-size: 14px;
+  }
+
   &:last-child {
     width: 8%;
   }
@@ -30,4 +35,8 @@ export const Total = styled.span`
   margin-top: 30px;
   margin-left: auto;
   font-size: 36px;
+
+  @media screen and (max-width: 800px){
+    font-size: 24px;
+  }
 `;

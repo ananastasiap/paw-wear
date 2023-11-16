@@ -20,6 +20,13 @@ export const CartDropdownContainer = styled.div`
   border-radius: 10px;
   overflow: hidden;
 
+  @media screen and (max-width: 800px){
+    top: 61px;
+    right: 41px;
+    width: 261px;
+    height: 306px;
+  }
+
   ${BaseButton},
   ${GoogleSignInButton},
   ${InvertedButton} {
