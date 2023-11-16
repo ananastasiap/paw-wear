@@ -23,6 +23,10 @@ export const FormContainer = styled.form`
   }
 `;
 
+export const TitleContainer = styled.h2`
+  font-size: 24px;
+`;
+
 export const PaymentButton = styled(Button)`
   margin-left: auto;
   margin-top: 30px;

@@ -15,10 +15,6 @@ export const CheckoutHeader = styled.div`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid darkgrey;
-
-  @media screen and (max-width: 800px){
-    justify-content: space-around;
-  }
 `;
 
 export const HeaderBlock = styled.div`
@@ -27,7 +23,7 @@ export const HeaderBlock = styled.div`
 
   @media screen and (max-width: 800px){
     width: auto;
-    font-size: 10px;
+    font-size: 14px;
   }
 
   &:last-child {

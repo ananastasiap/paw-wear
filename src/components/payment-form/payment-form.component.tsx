@@ -14,6 +14,7 @@ import {
   FormContainer,
   PaymentFormContainer,
   PaymentButton,
+  TitleContainer
 } from "./payment-form.styles";
 
 const PaymentForm = () => {
@@ -68,7 +69,7 @@ const PaymentForm = () => {
   return (
     <PaymentFormContainer>
       <FormContainer onSubmit={paymentHandler}>
-        <h2>Credit Card Payment: </h2>
+        <TitleContainer>Credit Card Payment: </TitleContainer>
         <CardElement />
         <PaymentButton
           isLoading={isProcessingPayment}
